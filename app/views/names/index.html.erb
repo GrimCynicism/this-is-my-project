@@ -1,0 +1,10 @@
+in index
+
+<ul>
+  <% @names.each do |name| %>
+  <li> <%= name.name %> at <%= name.created_at %>
+  <% end %>
+<ul>
+<br>
+
+<%= link_to("New Name", new_name_path) %>

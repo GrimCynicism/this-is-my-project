@@ -1,0 +1,8 @@
+<h1>Welcome#index</h1>
+<p>Find me in app/views/welcome/new.html.erb</p>
+
+<%= form_for(@name) do |f| %>
+  <%= f.label :name, "My name is:" %>
+  <%= f.text_field(:name) %>
+  <%= f.submit "Submit" %>
+<% end %>
