@@ -11,7 +11,7 @@ class NamesController < ApplicationController
   def create
   	@name = Name.new(name_params)
   	if @name.save
-  		render :index
+  		redirect_to :root_path
   	else
   		render :new
   	end
