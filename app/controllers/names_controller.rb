@@ -10,16 +10,11 @@ class NamesController < ApplicationController
 
   def create
   	@name = Name.new(name_params)
-  	puts "saving #{@name.inspect}"
   	if @name.save
-  	puts "saved ok"
   		redirect_to root_path
   	else
   		render :new
   	end
-  rescue Exception => e
-    puts "#{e.message}"
-    puts "#{e.backtrace.inspect}"
   end
 
   private
